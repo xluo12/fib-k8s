@@ -15,4 +15,10 @@ spec:
       containers:
         - name: worker
           image: xluo12/multi-worker
+          env:
+            - name: REDIS_HOST
+              value: redis-cluster-ip-service
+            - name: REDIS_PORT
+              value: 6379
+
            
