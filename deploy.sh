@@ -1,8 +1,10 @@
-docker build -t xluo12/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t xluo12/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t xluo12/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t xluo12/multi-client:latest -t xluo12/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t xluo12/multi-server:latest -t xluo12/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t xluo12/multi-worker:latest -t xluo12/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
-
+docker push xluo12/multi-client:latest
+docker push xluo12/multi-server:latest
+docker push xluo12/multi-worker:latest
 
 docker push xluo12/multi-client:$SHA
 docker push xluo12/multi-server:$SHA
