@@ -11,6 +11,6 @@ docker push xluo12/multi-server:$SHA
 docker push xluo12/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployment client=xluo12/multi-client:$SHA
 kubectl set image deployments/server-deployment server=xluo12/multi-server:$SHA
+kubectl set image deployments/client-deployment client=xluo12/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=xluo12/multi-worker:$SHA
